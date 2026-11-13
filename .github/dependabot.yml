@@ -1,0 +1,19 @@
+# Weekly routine updates are grouped by ecosystem; major versions remain separate.
+version: 2
+updates:
+- package-ecosystem: docker-compose
+  directories:
+  - /solrcloud-3-nodes-zookeeper-ensemble
+  - /solrcloud
+  - /zookeeper-ensemble
+  - /zookeeper
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 5
+  groups:
+    patch-and-minor:
+      patterns:
+      - '*'
+      update-types:
+      - patch
+      - minor
